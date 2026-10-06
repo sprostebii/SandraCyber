@@ -1,42 +1,63 @@
-# SandraCyber # Hi, I'm Sandra 👋
+# 🛡️ Sandra's Cybersecurity Portfolio
 
-I'm an aspiring SOC Analyst based in Israel, currently completing
-professional cybersecurity training and developing hands-on experience
-in defensive security and incident investigation.
+Welcome to my cybersecurity portfolio.
 
-## 🛡️ Cybersecurity Focus
+I'm an aspiring SOC Analyst building hands-on experience in Blue Team operations, incident investigation, Windows security, networking, SIEM/EDR, and Active Directory.
 
-- SOC Analysis
-- SIEM & EDR
-- Incident Response
-- Windows Event Log Analysis
+This repository contains practical labs and security investigations completed as part of my cybersecurity training and independent practice.
+
+---
+
+## 🔬 Projects & Write-ups
+
+### 🔍 Windows Event Log Investigation
+Analysis of Windows Security Events, authentication activity, process creation, and suspicious behavior.
+
+**Skills:** Windows Event Logs • Event IDs • Incident Analysis • PowerShell
+
+🚧 Write-up in progress
+
+---
+
+### 🌐 Network Traffic Analysis
+Analysis of network traffic, TCP/IP communication, ports, protocols, and suspicious network behavior using Wireshark.
+
+**Skills:** Wireshark • TCP/IP • DNS • HTTP/HTTPS • Network Analysis
+
+🚧 Write-up in progress
+
+---
+
+### 🖥️ Active Directory Lab
+Hands-on Windows Server and Active Directory lab involving users, groups, permissions, authentication, and security events.
+
+**Skills:** Windows Server • Active Directory • Group Management • Permissions
+
+🚧 Write-up in progress
+
+---
+
+### 🚨 SIEM / EDR Investigation
+Security alert investigation using process trees, endpoint activity, network connections, and incident-response methodology.
+
+**Skills:** SIEM • EDR • Process Analysis • Incident Response
+
+🚧 Write-up in progress
+
+---
+
+## 🧰 Technologies
+
+- Windows & Windows Server
+- Linux / Kali Linux
 - Active Directory
-- Network Traffic Analysis
-- Linux
-- TCP/IP & Networking
 - Wireshark
-
-## 🔬 Cybersecurity Portfolio
-
-I'm building hands-on security investigations and home lab projects
-focused on analyzing real-world security scenarios.
-
-Projects and detailed write-ups will be available here.
-
-## 📚 Currently Learning
-
-- Blue Team investigation techniques
+- PowerShell
 - SIEM / EDR
-- Detection & Incident Response
-- Windows Security
-- Network Security
+- TCP/IP & Networking
 
-## 🎯 Career Goal
+---
 
-I'm currently looking for my first opportunity in cybersecurity
-or IT infrastructure, including:
+## 🎯 Current Focus
 
-- Junior SOC Analyst
-- NOC
-- Tier 2 Technical Support
-- Junior System Administrator
+Building practical Blue Team skills through hands-on investigations, home labs, and security write-ups while preparing for my first role in cybersecurity or IT infrastructure.
