@@ -36,6 +36,7 @@ Three controlled failed authentication attempts were generated from the local Wi
 An invalid password was entered during each attempt.
 The purpose was to observe how failed authentication activity appears in the Windows Security Log.
 🔎 Evidence 1 — Failed Logon Event
+![Windows Event ID 4625 - Failed Logon](screenshots/01-failed-logon-4625.png)
 Windows Event Viewer recorded:
 Event ID: 4625 — An account failed to log on
 Key information observed:
