@@ -79,6 +79,7 @@ Additional context and authentication events would be required before classifyin
 ---
 
 ## 🔍 Evidence 2 — Successful Logon Analysis
+![Windows Event ID 4624 - Successful Session Unlock](02-successful-logon-4624.png)
 
 During the investigation, **Event ID 4624** events were reviewed to determine whether any successful authentication could be correlated with the failed logon attempts involving `FakeSOCUser`.
 
