@@ -66,7 +66,7 @@ The target account was `FakeSOCUser`.
 
 The event recorded **Logon Type 2**, which represents an interactive logon.
 
-The source address was `::1`, the IPv6 loopback address. This indicates that the authentication request originated locally from the same machine rather than from a remote host.
+The source address was `::1`, the IPv6 loopback address. In the context of this controlled lab, this is consistent with locally generated authentication activity.
 
 The failure reason was:
 
@@ -78,22 +78,57 @@ Additional context and authentication events would be required before classifyin
 
 ---
 
-## 🧠 Analyst Assessment
+## 🔍 Evidence 2 — Successful Logon Analysis
 
-**Initial classification:** Suspicious authentication activity
+During the investigation, **Event ID 4624** events were reviewed to determine whether any successful authentication could be correlated with the failed logon attempts involving `FakeSOCUser`.
 
-**Brute-force confirmed:** No
+A successful authentication event was identified for the account `sandra`.
 
-**Reason:** Multiple failed logons were observed, but the available evidence is insufficient to conclusively identify automated password guessing.
+### Key Information
 
-Further investigation should include:
+| Field | Value |
+|---|---|
+| Event ID | 4624 |
+| Account Name | sandra |
+| Account Domain | DOMAIN |
+| Logon Type | 7 |
+| Result | Successful |
+| Computer | pc1.domain.local |
 
-- Reviewing additional Event ID 4625 events
-- Checking the frequency and timing of failed attempts
-- Identifying whether multiple usernames were targeted
-- Reviewing source addresses
-- Checking for a successful Event ID 4624 following the failures
+## Final Analyst Assessment
 
+**Classification:** Suspicious Authentication Activity
+
+**Account Compromise Confirmed:** No
+
+**Brute Force Confirmed:** No
+
+Multiple failed authentication attempts were observed for `FakeSOCUser`. However, no successful authentication for the same account was identified during the investigation.
+
+Successful Event ID 4624 activity associated with `sandra` was reviewed, but the different account and logon context mean that it cannot be considered evidence of a successful compromise following the failed attempts.
+
+Based on the available evidence, the activity remains classified as **suspicious authentication activity with insufficient evidence to confirm account compromise**.
+
+### Recommended Next Steps
+
+- Review additional Event ID 4625 events for repeated authentication failures.
+- Search for Event ID 4624 events involving the same target account.
+- Compare timestamps, account names, logon types, workstation names, and source addresses.
+- Look for unusual authentication frequency or attempts against multiple accounts.
+- Correlate authentication activity with endpoint and network telemetry.
+---
+
+## 🛡️ Final Analyst Conclusion
+
+**Classification:** Suspicious Authentication Activity  
+**Account Compromise Confirmed:** No  
+**Brute Force Confirmed:** No
+
+Multiple failed authentication attempts were observed for `FakeSOCUser`. However, no successful authentication for the same account was identified during the investigation.
+
+Successful Event ID 4624 activity associated with `sandra` was reviewed, but the different account and logon context mean that it cannot be considered evidence of a successful compromise following the failed attempts.
+
+Based on the available evidence, the activity remains classified as **suspicious authentication activity with insufficient evidence to confirm account compromise**.
 ---
 
 ## 📚 What I Learned
@@ -101,17 +136,11 @@ Further investigation should include:
 Through this investigation, I practiced:
 
 - Windows Security Event analysis
-- Event ID 4625 investigation
+- Investigating Event IDs 4624 and 4625
 - Authentication log analysis
 - Understanding Windows Logon Types
 - Identifying IPv6 loopback traffic
+- Correlating successful and failed authentication events
 - Distinguishing suspicious activity from confirmed malicious activity
+- Avoiding false correlation between unrelated security events
 - Making evidence-based SOC conclusions
-
----
-
-## 🚧 Next Step
-
-Analyze successful authentication events (**Event ID 4624**) and correlate them with the failed logon activity.
----
-
